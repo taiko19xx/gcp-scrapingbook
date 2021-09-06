@@ -9,7 +9,7 @@ exports.getAmazon = async (url) => {
     const domBody = new JSDOM(resp.data);
     const document = domBody.window.document;
 
-    const title = document.querySelector('span#productTitle').textContet.replace(/(?:\r\n|\r|\n)/g, '');
+    const title = document.querySelector('span#productTitle').textContent.replace(/(?:\r\n|\r|\n)/g, '');
 
     const priceBlocks = [
       'span#priceblock_dealprice',
